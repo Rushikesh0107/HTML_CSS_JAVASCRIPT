@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOKES</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+      }
+
+      h2{
+        margin-bottom: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+
+      button{
+        width: 150px;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        background-color: rgba(46, 120, 95, 0.522);
+
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+    
+    <h2 id="joke">Click the button for the joke</h2>
+    <button onclick="newJoke()">New joke</button>
+
+    </div>
+    
+
+    <script src="jokes.js"></script>
+
+  </body>
+</html>

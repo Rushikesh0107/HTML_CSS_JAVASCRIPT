@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors</title>
+</head>
+<body>
+    
+    <script>
+        
+        let chances = 0;
+        while(chances <= 5){
+            
+            let user_guess = prompt("Enter your guess rock paper or scissors");
+            let arr = ["rock", "paper", "scissors"];
+            let randomIndex = Math.round(Math.random() * 3);
+            let computer_guess = arr[randomIndex];
+            
+            if(computer_guess == user_guess){
+                alert("Draw")
+            }
+            else if(computer_guess == "rock" && user_guess == "paper"){
+                alert("user wins")
+            }
+            else if(computer_guess == "rock" && user_guess == "scissors"){
+                alert("computer wins")
+            }
+            else if(computer_guess == "paper" && user_guess == "scissors"){
+                alert("user wins")
+            }
+            else if(computer_guess == "paper" && user_guess == "rock"){
+                alert("computer wins")
+            }
+            else if(computer_guess == "scissors" && user_guess == "rock"){
+                alert("user wins")
+            }
+            else if(computer_guess == "scissors" && user_guess == "paper"){
+                alert("computer wins")
+            }
+            chances++;
+            console.log("Computers guess was : ", computer_guess);
+            console.log("Users guess was : ", user_guess);
+        }
+        
+
+    </script>
+</body>
+</html>

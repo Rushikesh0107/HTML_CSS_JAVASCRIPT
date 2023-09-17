@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body style="background-color: #313131;">
+
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <script>
+
+        //lexical scoping
+
+        // function Parent(){
+        //     let money = "none"
+
+        //     function child(){
+        //         let icecream = "chocolate flavoured"
+        //         console.log(money);
+        //     }
+
+        //     function sibliing(){
+        //         console.log(icecream)
+        //     }
+
+        //     child();
+        //     sibling();
+        // }
+
+        // Parent();
+
+        //child can access variables of parent but it cannot happen vice versa
+        //sibling func cannot share the variables with each other
+
+        //Closure
+        
+        
+        function change(){
+            let color = "red";
+            return function click(){
+                console.log(color);
+            }
+        }
+
+        let ans = change();
+        ans();
+
+        //example of closure
+
+        document.getElementById("red").onclick = handleClick("red")
+        document.getElementById("green").onclick = handleClick("green")
+        
+        function handleClick(color){
+            return () => {document.body.style.background = color}
+        }
+
+        //when u return function the function is returned with the variables it is using.
+        //According to above example the color is stored in the paren function but when the child function is returned
+        //the information of color is also sent when the function is called. This is known as closure.
+
+    </script>
+</body>
+</html>

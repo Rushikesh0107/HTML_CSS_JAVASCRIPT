@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Methods</title>
+</head>
+<body>
+
+    i am outside the container
+    <div class="container">
+        i am the start of the container (inner)
+        <div>I am a element in the container</div>
+        i am the end of this container (inner)
+    </div>
+    i am outside the container
+
+    <script>
+        
+        let a = document.getElementsByTagName("div")[0];
+
+        let div = document.createElement("div");
+        div.innerHTML = "<h1>Hello Ppl</h1>";
+        
+        a.appendChild(div);
+        a.prepend(div);
+        a.before(div);
+        a.after(div);
+        a.replaceWith(div);
+
+    </script>
+</body>
+</html>

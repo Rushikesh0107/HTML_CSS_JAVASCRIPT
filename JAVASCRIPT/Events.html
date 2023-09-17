@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="container">
+        <ul id="images">
+            <li><img src="pic_bulboff.gif"></li>
+            <li><img src="pic_bulbon.gif"></li>
+            <li><img src="pic_bulboff.gif"></li>
+        </ul>
+    </div>
+    <script>
+
+        //EventListener syntax 
+        //.addEventListener('action',function(){},false)
+        //.stopPropogation is used to prevent bubbling
+        // Another way is called capturing
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            
+            let select = e.target.parentNode;
+            if (e.target.tagName === "IMG") {
+                console.log(e.target.tagName);
+                select.remove();
+            }
+            
+            //selection.remove();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <img src="checked.png" alt="">
+            <h1>Song Name</h1>
+            <p>Artist</p>
+            <audio id="song">
+                <source src="Akela  Big Scratch Prod by pink  Official Music Video.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div id="controls">
+                <nav>
+                    <button id="back">BACK</button>
+                    <button id="play" class="play" onclick="playPause()">PLAY</button>
+                    <button id="next">NEXT</button>
+                </nav>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

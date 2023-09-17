@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call-Back and error Handling</title>
+</head>
+<body>
+
+    <script>
+
+        //Syncronous Programming
+        // let a = prompt("What is Your name ?");
+        // let b = prompt("What is your age ?");
+        // let c = prompt("What is your fav number ?");
+        // console.log(a + "age is " + b + " his fav number is " + c);
+
+        //Asyncronous Programming
+        // console.log("start");
+        // setTimeout(function() {
+        //     console.log('this is inside timeout');
+        // }, 3000)
+        // console.log('end');
+
+        //CallBacks && Error Handling.....
+        function loadScript(src, CallBacks){
+            let script = document.createElement("script")
+            script.src = src;
+            script.onload = function(){
+                console.log('Loaded the script with SRC: ' + src);
+                CallBacks(null, src);
+            }
+            script.onerror = function(){
+                console.log("error loading script with SRC " + src);
+                CallBacks(new Error("Scr got some error "))
+            }
+            document.body.appendChild(script);
+        }
+
+        function hello(error, src){
+            if(error){
+                console.log(error);
+                return
+            }
+            console.log('hello world!! ' + src);
+        }
+
+        function goodmorning(error,src){
+            if(error){
+                console.log(error);
+                return
+            }
+            alert('goodmoring ' + src);
+        }
+        loadScript("jokes.js", goodmorning)
+        loadScript('jokes.js', hello)
+        loadScript('joke.js',hello)
+
+    </script>
+</body>
+</html>

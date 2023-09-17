@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call and this</title>
+  </head>
+  <body>
+    <script>
+      function setUsername(username) {
+        this.username = username;
+        console.log("called");
+      }
+
+      function createUser(username, email, password) {
+        setUsername.call(this, username);
+
+        //.call is used to make a call to the function but with saving the refrence data by giving this in the arguments
+        //this in the arguemnet helps us to get the data from the foreign function even after the function is 
+        //executed. Before vanishing the data in the function is handed over to the this passed with argument
+
+        this.email = email;
+        this.password = password;
+      }
+
+      const chai = new createUser("rushikesh", "rushikesh123@gmail.com", "123");
+      console.log(chai);
+    </script>
+  </body>
+</html>

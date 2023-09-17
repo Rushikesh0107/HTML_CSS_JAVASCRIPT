@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container{
+  border: 1px solid black;
+  overflow: auto;
+  margin-bottom: 10px;
+  
+}
+.item{
+  
+  border: 1px solid black;
+  height: 200px;
+  width: 200px;
+  background-color: aquamarine;
+  float: left;
+
+}
+
+.box{
+
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  overflow: scroll;
+
+}

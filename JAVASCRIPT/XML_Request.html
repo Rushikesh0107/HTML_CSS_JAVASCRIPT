@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpsRequest</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            gap: 20px;
+        }
+
+        #btn{
+            width: 100px;
+            height: 50px;
+            font-size: large;
+        }
+
+        .card{
+            width: 50%;
+            height: 40%;
+            background-color: darkgray;
+            border-radius: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            opacity: 0;
+            
+            
+        }
+
+        #pfp{
+            width: 50%;
+            height: 45%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Click on this button to see your github Name, id and followers.</h2>
+        <button id="btn">
+            Click
+        </button>
+        <div class="card">
+            <img src="" alt="" id="pfp">
+            <span class="name"></span>
+            <span class="followers"></span>
+        </div>
+    </div>
+    <script>
+        let request = "https://api.github.com/users/rushikesh0107"
+        let xhr = new XMLHttpRequest();
+
+        let button = document.querySelector('#btn');
+
+        button.addEventListener('click',(e)=>{
+            let card = document.querySelector('.card');
+            card.style.opacity = 1;
+        })
+
+        xhr.open('GET',request);
+        xhr.onreadystatechange = function(){
+            //console.log(xhr.readyState);
+            if(xhr.readyState === 4){
+                let data = JSON.parse(this.responseText);
+                //console.log(this.responseText);
+                //console.log(typeof data);
+                let pfpLink = data.avatar_url;
+
+                document.querySelector('#pfp').src = pfpLink;
+                document.querySelector('.name').innerHTML = `<h2>${data.login}</h2>`
+                document.querySelector('.followers').innerHTML = `<h2>${data.followers}</h2>`
+            }
+        }
+        xhr.send();
+    </script>
+</body>
+</html>

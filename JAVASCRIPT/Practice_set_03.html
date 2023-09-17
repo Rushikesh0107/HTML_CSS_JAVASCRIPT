@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 03</title>
+    <style>
+        img{
+            position: absolute;
+        }
+
+        .on{
+           opacity: 0;  
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="google">Google</button>
+    <button id="facebook">Facebook</button>
+    <button id="twitter">Twitter</button>
+    <br>
+    <br>
+
+    <img src="pic_bulboff.gif" alt="" class="bulb">
+    <img src="pic_bulbon.gif" alt="" class="bulb on">
+
+    <script>
+    
+    let btn = function(){
+        window.location = "https://google.com"
+    }
+    google.addEventListener('click',btn)
+
+    let btn2 = function(){
+        window.location = "https://facebook.com"
+    }
+    facebook.addEventListener('click',btn2)
+
+    let btn3 = function(){
+        window.location = "https://twitter.com"
+    }
+    twitter.addEventListener('click',btn3)
+
+    setInterval((blink) => {
+        document.getElementsByTagName("img")[1].classList.toggle("on")
+    }, 1000);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Card</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(64, 136, 172, 0.608);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 310px;
+        height: 500px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        box-shadow: 0px 0px 10px 2px black;
+      }
+
+      .card .top {
+        width: 100%;
+        height: 27%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card h2 {
+        align-self: center;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        padding: 0px 10px;
+        align-self: center;
+        text-align: center;
+      }
+
+      .order {
+        width: 80%;
+        height: 12%;
+        background-color: rgba(127, 255, 212, 0.465);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .leftbox {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 10px;
+      }
+
+      .rightBox {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+      }
+
+      .imgBox img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 80%;
+        height: 9%;
+        background-color: rgb(32, 32, 132);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 5px 20px rgb(86, 84, 84);
+      }
+
+      button:hover {
+        cursor: pointer;
+      }
+
+      .cancel {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="card_image.jpg" alt="" class="top" />
+
+        <h2>Order Summary</h2>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+          tempora nulla vero mollitia reiciendis a libero magni sint enim
+          consequuntur.
+        </p>
+
+        <div class="order">
+          <div class="leftbox">
+            <div class="imgBox">
+              <img src="download.png" alt="" />
+            </div>
+
+            <div class="amount">
+              <p>Annual Plan</p>
+              <p>99.9$/year</p>
+            </div>
+          </div>
+
+          <div class="rightBox">
+            <a href="#">Change</a>
+          </div>
+        </div>
+
+        <button class="payment">Proceed to Payment</button>
+
+        <h3><a href="#" class="cancel">Cancel Order</a></h3>
+      </div>
+    </div>
+  </body>
+</html>

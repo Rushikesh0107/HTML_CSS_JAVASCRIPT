@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTineout & setInterval</title>
+</head>
+<body>
+    <script>
+        document.write("hello")
+
+        // let a = setTimeout(function() {
+        //     alert("i am inside of a timeout")
+        // }, 4000)
+
+        // let b = prompt("do you want to read the timeout message y/n?")
+        // if(b == "n"){
+        //     clearTimeout(a);
+        // }
+        const sum = (a,b) =>{
+            a = prompt("enter the value of a")
+            a = Number.parseInt(a);
+            b = prompt("enter the value of b")
+            b = Number.parseInt(b);
+            alert(a + b)
+        }
+        let timerId = setTimeout(sum, 5000, 1,2)
+
+        clearTimeout(timerId);
+
+        // setInterval(function(){
+        //     alert("setInterval")
+        // }, 5000)
+
+        setInterval(sum,10000)
+    </script>
+</body>
+</html>

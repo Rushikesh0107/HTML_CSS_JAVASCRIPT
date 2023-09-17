@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array using loops</title>
+    <script>
+        let arr = [1,2,34,4];
+
+        //basic for loop
+        for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+        }
+
+        //forEach loop
+        arr.forEach(element => {
+            console.log(element*element);
+        });
+
+        let marks = {
+            Rushikesh:77,
+            harry:23,
+            barry:33
+        }
+
+        //for in loop
+        for (const key in marks) {
+            if (Object.hasOwnProperty.call(marks, key)) {
+                const element = marks[key];
+                console.log(key + " has " + element);
+            }
+        }
+        //Array.from()
+        let name = "Rushikesh"
+        let newArray = Array.from(name);
+        console.log(newArray);
+
+        //for of loop
+        for (const i of arr) {
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

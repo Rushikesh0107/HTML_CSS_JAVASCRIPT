@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <script>
+       let elem = document.getElementById('click');
+       console.log(elem);
+
+       let elemClass = document.getElementsByClassName('container');
+       console.log(elemClass);
+       elemClass[0].style.background = "red";
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 2px solid blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <button id="click">Click Me</button>
+        <p>Hello my name is jordan</p>
+    </div>
+    <div class="container">
+        <h2>hello World</h2>
+    </div>
+</body>
+</html>

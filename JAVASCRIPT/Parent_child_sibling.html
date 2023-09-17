@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent child and sibling</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+        }
+        nav{
+            background-color: grey;
+            padding: 20px;  
+            display: flex;
+            justify-content: end;
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        ul li{
+            margin: 0px 20px;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact Us</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        console.log(document.body.firstElementChild);
+        console.log(document.body.children);
+    </script>
+</body>
+</html>

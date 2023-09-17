@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(70, 159, 163, 0.755);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card{
+            width: 300px;
+            height: 500px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            gap: 30px;
+            box-shadow: 1px 1px 10px black;
+
+        }
+
+        .card img{
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        h2{
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+            <img src="download.png" alt="">
+
+            <h2>Scan this Qr code to learn Web Dev</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quibusdam vel cum provident odio reprehenderit quo nostrum voluptatum voluptas ducimus.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
